@@ -1,4 +1,5 @@
 " use relative line numbers
+set number
 set relativenumber
 " always show at least 8 lines before and after the cursor (short: so)
 set scrolloff=8
