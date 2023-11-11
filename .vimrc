@@ -12,6 +12,25 @@ set smartindent
 " horizontal ruler after 120 characters
 set colorcolumn=120
 
+" make cursor look right in Windows Terminal in WSL, see https://github.com/microsoft/terminal/issues/4335#issuecomment-706499666
+if &term =~ '^xterm'
+  " enter vim
+  autocmd VimEnter * silent !echo -ne "\e[1 q"
+  " oherwise
+  let &t_EI .= "\<Esc>[1 q"
+  " insert modle
+  let &t_SI .= "\<Esc>[5 q"
+  " 1 or 0 -> blinking block
+  " 2 -> solid block
+  " 3 -> blinking underscore
+  " 4 -> solid underscore
+  " Recent versions of xterm (282 or above) also support
+  " 5 -> blinking vertical bar
+  " 6 -> solid vertical bar
+  " leave vim
+  autocmd VimLeave * silent !echo -ne "\e[5 q"
+endif
+
 " this is supposed to make e.g. LSP hints appear faster (not applicable for me right now)
 " set updatetime=50
 
