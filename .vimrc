@@ -80,3 +80,6 @@ vnoremap <leader><leader>P "+P
 nnoremap <leader><leader>y "+y
 vnoremap <leader><leader>y "+y
 
+" Leader Search: search for selected text in visual mode
+vnoremap <leader>/ y/\V<C-R>=escape(@",'/\')<CR><CR>
+
