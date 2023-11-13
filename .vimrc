@@ -80,6 +80,14 @@ vnoremap <leader><leader>P "+P
 nnoremap <leader><leader>y "+y
 vnoremap <leader><leader>y "+y
 
-" Leader Search: search for selected text in visual mode
+" Leader Search in visual mode: search for the EXACT selected text
 vnoremap <leader>/ y/\V<C-R>=escape(@",'/\')<CR><CR>
+" Leader Search in normal mode: search for the EXACT entered text
+nnoremap <leader>/ /
+" Regular Search in normal mode: ignore case
+nnoremap / /\c
+
+" Don't drop the selection after changing indentation
+vnoremap > >gv
+vnoremap < <gv
 
