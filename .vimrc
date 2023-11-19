@@ -92,5 +92,5 @@ vnoremap > >gv
 vnoremap < <gv
 
 " Ctrl+l is used for exiting, so use Ctrl+m for 'auto-completing search'
-cnoremap <C-m> <C-l>
+cnoremap <C-j> <C-l>
 
