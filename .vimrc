@@ -101,3 +101,8 @@ vnoremap < <gv
 " Ctrl+l is used for exiting, so use Ctrl+m for 'auto-completing search'
 cnoremap <C-j> <C-l>
 
+" Leader l -> lead file from disk
+nnoremap <leader>l :e<CR>
+" Leader w -> save file
+nnoremap <leader>w :w<CR>
+
